@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"doann\startup_stm32f103xb.o"
+"doann\main.o"
+"doann\stm32f1xx_it.o"
+"doann\stm32f1xx_hal_msp.o"
+"doann\stm32f1xx_hal_gpio_ex.o"
+"doann\stm32f1xx_hal_tim.o"
+"doann\stm32f1xx_hal_tim_ex.o"
+"doann\stm32f1xx_hal.o"
+"doann\stm32f1xx_hal_rcc.o"
+"doann\stm32f1xx_hal_rcc_ex.o"
+"doann\stm32f1xx_hal_gpio.o"
+"doann\stm32f1xx_hal_dma.o"
+"doann\stm32f1xx_hal_cortex.o"
+"doann\stm32f1xx_hal_pwr.o"
+"doann\stm32f1xx_hal_flash.o"
+"doann\stm32f1xx_hal_flash_ex.o"
+"doann\stm32f1xx_hal_exti.o"
+"doann\system_stm32f1xx.o"
+--strict --scatter "DOANN\DOANN.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "DOANN.map" -o DOANN\DOANN.axf

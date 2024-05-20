@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"ev\startup_stm32f103xb.o"
+"ev\i2c-lcd.o"
+"ev\main.o"
+"ev\stm32f1xx_it.o"
+"ev\stm32f1xx_hal_msp.o"
+"ev\stm32f1xx_hal_gpio_ex.o"
+"ev\stm32f1xx_hal_adc.o"
+"ev\stm32f1xx_hal_adc_ex.o"
+"ev\stm32f1xx_hal.o"
+"ev\stm32f1xx_hal_rcc.o"
+"ev\stm32f1xx_hal_rcc_ex.o"
+"ev\stm32f1xx_hal_gpio.o"
+"ev\stm32f1xx_hal_dma.o"
+"ev\stm32f1xx_hal_cortex.o"
+"ev\stm32f1xx_hal_pwr.o"
+"ev\stm32f1xx_hal_flash.o"
+"ev\stm32f1xx_hal_flash_ex.o"
+"ev\stm32f1xx_hal_exti.o"
+"ev\stm32f1xx_hal_i2c.o"
+"ev\stm32f1xx_hal_tim.o"
+"ev\stm32f1xx_hal_tim_ex.o"
+"ev\system_stm32f1xx.o"
+--strict --scatter "EV\EV.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "EV.map" -o EV\EV.axf

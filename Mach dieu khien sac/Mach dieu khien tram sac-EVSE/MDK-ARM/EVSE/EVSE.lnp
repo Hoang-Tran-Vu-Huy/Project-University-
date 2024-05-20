@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"evse\startup_stm32f103xb.o"
+"evse\main.o"
+"evse\stm32f1xx_it.o"
+"evse\stm32f1xx_hal_msp.o"
+"evse\stm32f1xx_hal_gpio_ex.o"
+"evse\stm32f1xx_hal_adc.o"
+"evse\stm32f1xx_hal_adc_ex.o"
+"evse\stm32f1xx_hal.o"
+"evse\stm32f1xx_hal_rcc.o"
+"evse\stm32f1xx_hal_rcc_ex.o"
+"evse\stm32f1xx_hal_gpio.o"
+"evse\stm32f1xx_hal_dma.o"
+"evse\stm32f1xx_hal_cortex.o"
+"evse\stm32f1xx_hal_pwr.o"
+"evse\stm32f1xx_hal_flash.o"
+"evse\stm32f1xx_hal_flash_ex.o"
+"evse\stm32f1xx_hal_exti.o"
+"evse\stm32f1xx_hal_tim.o"
+"evse\stm32f1xx_hal_tim_ex.o"
+"evse\system_stm32f1xx.o"
+--strict --scatter "EVSE\EVSE.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "EVSE.map" -o EVSE\EVSE.axf
