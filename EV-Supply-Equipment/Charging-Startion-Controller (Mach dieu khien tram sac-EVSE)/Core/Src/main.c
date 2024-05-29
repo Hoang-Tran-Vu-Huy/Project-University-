@@ -218,18 +218,21 @@ int main(void)
 		//--------------------------------------------------lay gia tri ADC---------------------------------------------------------------------------------
 		for(i=0;i<10;i++)
 		{
+			//do gia tri dien ap o chan CP
 			ADC_Select_CH0();
 			HAL_ADC_Start(&hadc1);
 			HAL_ADC_PollForConversion(&hadc1,100);
 			tong_0+=HAL_ADC_GetValue(&hadc1);
 			HAL_ADC_Stop(&hadc1); 
 			
+			//do gia tri dien ap o chan PP
 			ADC_Select_CH1();
 			HAL_ADC_Start(&hadc1);
 			HAL_ADC_PollForConversion(&hadc1,100);
 			tong_1+=HAL_ADC_GetValue(&hadc1);
 			HAL_ADC_Stop(&hadc1); 
 			
+			//lay tin hieu cuong do dong dien trong qua trinh sac
 			ADC_Select_CH9();
 			HAL_ADC_Start(&hadc1);
 			HAL_ADC_PollForConversion(&hadc1,100);
